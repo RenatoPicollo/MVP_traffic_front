@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Veicular</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Registro de Tráfego de Veículos</h1>
+    <p>Selecione o local e envie uma foto contendo a placa do veículo.</p>
+
+    <section class="card">
+      <form id="form-registro">
+        <label for="local">Local</label>
+        <select id="local" required>
+          <option value="">Carregando locais...</option>
+        </select>
+
+        <label for="imagem">Imagem</label>
+        <input id="imagem" type="file" accept="image/jpeg,image/png,image/webp" required>
+
+        <img id="preview" class="preview" hidden alt="Prévia da imagem">
+
+        <button id="btn-enviar" type="submit">Analisar e Registrar</button>
+      </form>
+
+      <div id="mensagem" class="mensagem" hidden></div>
+    </section>
+
+    <section class="card">
+      <h2>Resultado</h2>
+      <div id="resultado">
+        <p>Nenhum registro processado ainda.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cabecalho-lista">
+        <h2>Últimos registros</h2>
+        <button id="btn-atualizar" type="button">Atualizar</button>
+      </div>
+      <div id="lista-registros"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
